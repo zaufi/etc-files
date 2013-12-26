@@ -1,0 +1,31 @@
+# Setup grep color and default options
+GREP_COLORS="ms=01;31:mc=01;31:sl=:cx=:fn=01;30:ln=01;30:bn=32:se=37"
+GREP_OPTIONS="--color=auto --exclude-dir=.svn --exclude-dir=.git --exclude-dir=.hg"
+
+# Set human redable size format for various commands
+BLOCK_SIZE=human-readable
+
+# Setup `less` options
+LESSCHARSET=utf-8
+LESSCOLOR=yes
+
+# Setup history
+HISTCONTROL=ignoredups:erasedups
+HISTSIZE=100000
+HISTFILESIZE=100000
+HISTIGNORE="&:[ ]*:exit:ls:ll:pwd:mc:su:df:du:du0:du1:clear:pushd:popd:reset:fg:bg:ipython"
+
+# Setup some paludis and system options
+CONFIG_PROTECT=/etc/localtime
+CAVE_SEARCH_INDEX=/var/cache/paludis/csi.idx
+CAVE_RESUME_FILE_OPT='--resume-file /storage/tmp/paludis/resume'
+
+# Set some DE and graphics related options
+GDFONTPATH='/usr/share/fonts/util:/usr/share/fonts/default:/usr/share/fonts/zaufi-fontset:/usr/share/fonts/encodings:/usr/share/fonts/encodings/large:/usr/share/fonts/terminus:/usr/share/fonts/dejavu:/usr/share/fonts/anonymous-pro:/usr/share/fonts/corefonts:/usr/share/fonts/intlfonts:/usr/share/fonts/urw-fonts'
+KDE_USE_IDN=ru
+
+# Strip loo long directory names from command prompt
+PROMPT_DIRTRIM=3
+
+#CCACHE_SIZE=4G
+#CCACHE_DIR=/storage/tmp/ccache
