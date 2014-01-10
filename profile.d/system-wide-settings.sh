@@ -3,7 +3,7 @@
 #
 
 # My favorite aliases
-alias du0='du -h --max-depth=0'
+alias du0='du -hs'
 alias du1='du -h --max-depth=1'
 alias ll='ls -Fla --color=auto --group-directories-first --indicator-style=file-type'
 alias ls='ls --color=auto'
