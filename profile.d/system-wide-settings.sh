@@ -10,7 +10,7 @@ alias ls='ls --color=auto'
 alias screen='screen -U'
 alias top='htop'
 
-alias diff='diff -ub'
+alias diff='diff -u'
 alias strace='strace -s 80 -a 60'
 alias g++11='g++ -std=c++11'
 alias clang++11='clang++ -std=c++11'

@@ -29,3 +29,5 @@ PROMPT_DIRTRIM=3
 
 #CCACHE_SIZE=4G
 #CCACHE_DIR=/storage/tmp/ccache
+
+NODE_PATH=/usr/lib64/node_modules
