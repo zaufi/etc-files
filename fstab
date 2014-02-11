@@ -11,20 +11,20 @@
 # See the manpage fstab(5) for more information.
 #
 
-# <fs>					<mountpoint>	<type>		<opts>				<dump/pass>
-LABEL=SYSTEM				/		btrfs		noatime,compress,discard,ssd	0 1
-LABEL=BOOT				/boot		reiserfs	noatime,notail,ro		0 2
+# <fs>					<mountpoint>	<type>		<opts>					<dump/pass>
+LABEL=SYSTEM				/		btrfs		noatime,nodiratime,compress,discard,ssd	0 1
+LABEL=BOOT				/boot		reiserfs	noatime,nodiratime,notail,ro		0 2
 
 # Mount LVM2 volumes
-/dev/mapper/storage-gentoo		/mnt/backup	reiserfs	noatime,notail			0 1
-/dev/mapper/storage-local		/usr/local	reiserfs	noatime,notail			0 2
-/dev/mapper/storage-storage		/storage	xfs		noatime				0 2
-/dev/mapper/storage-home		/home		reiserfs	noatime,notail			0 2
-/dev/mapper/storage-work		/work		reiserfs	noatime,notail			0 2
+/dev/mapper/storage-gentoo		/mnt/backup	reiserfs	noatime,nodiratime,notail		0 1
+/dev/mapper/storage-local		/usr/local	reiserfs	noatime,nodiratime,notail		0 2
+/dev/mapper/storage-storage		/storage	xfs		noatime,nodiratime			0 2
+/dev/mapper/storage-home		/home		reiserfs	noatime,nodiratime,notail		0 2
+/dev/mapper/storage-work		/work		reiserfs	noatime,nodiratime,notail		0 2
 
 # Mount special filesystems
-/dev/mapper/storage-swap		none		swap		sw				0 0
-none					/tmp		tmpfs		rw				0 0
+/dev/mapper/storage-swap		none		swap		sw					0 0
+none					/tmp		tmpfs		rw					0 0
 
 # Other (non-auto) mountpoints
-LABEL=UEFI				/boot/efi	vfat		noauto				0 2
+LABEL=UEFI				/boot/efi	vfat		noauto					0 2
