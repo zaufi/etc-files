@@ -1,0 +1,16 @@
+# fstab: static file system information for chroots.
+# Note that the mount point will be prefixed by the chroot path
+# (CHROOT_PATH)
+#
+# <file system>						<mount point>			<type>	<options>	<dump>	<pass>
+/proc							/proc				none	rw,bind		0	0
+/sys							/sys				none	rw,bind		0	0
+/dev							/dev				none	rw,bind		0	0
+/dev/pts						/dev/pts			none	rw,bind		0	0
+/tmp							/tmp				none	rw,bind		0	0
+/home							/home				none	rw,bind		0	0
+/work							/work				none	rw,bind		0	0
+/storage/soft/ubuntu/archives				/var/cache/apt/archives		none	rw,bind		0	0
+/storage/soft/entell/repo				/home/builder/entell.repo	none	rw,bind		0	0
+/storage/soft/caos/repo					/home/builder/caos.repo		none	rw,bind		0	0
+/work/GitHub/zaufi.github.com/assets/ubuntu.repo	/home/builder/ubuntu.repo	none	rw,bind		0	0
