@@ -11,3 +11,4 @@
 /home							/home				none	rw,bind		0	0
 /work							/work				none	rw,bind		0	0
 /storage/soft/centos/yum				/var/cache/yum			none	rw,bind		0	0
+/storage/tmp/rpm					/home/builder/rpm		none	rw,bind		0	0
