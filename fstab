@@ -27,5 +27,8 @@ LABEL=BOOT				/boot		reiserfs	noatime,nodiratime,notail,ro		0 2
 none					/dev/shm	tmpfs		exec,relatime,size=3G			0 0
 none					/tmp		tmpfs		rw					0 0
 
+# Remount some dirs
+#/storage/lxc				/var/lxc	none		rw,bind					0 0
+
 # Other (non-auto) mountpoints
 LABEL=UEFI				/boot/efi	vfat		noauto					0 2
