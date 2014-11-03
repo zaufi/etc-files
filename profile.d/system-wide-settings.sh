@@ -14,6 +14,8 @@ alias diff='diff -u'
 alias strace='strace -s 80 -a 60'
 alias g++11='g++ -std=c++11'
 alias clang++11='clang++ -std=c++11'
+alias g++14='g++ -std=c++14'
+alias clang++14='clang++ -std=c++14'
 
 # Setup shell options
 shopt -q -s autocd
