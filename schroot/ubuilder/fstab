@@ -13,4 +13,4 @@
 /storage/soft/ubuntu/archives				/var/cache/apt/archives		none	rw,bind		0	0
 /storage/soft/entell/repo				/home/builder/entell.repo	none	rw,bind		0	0
 /storage/soft/caos/repo					/home/builder/caos.repo		none	rw,bind		0	0
-/work/GitHub/zaufi.github.com/assets/ubuntu.repo	/home/builder/ubuntu.repo	none	rw,bind		0	0
+#/work/GitHub/zaufi.github.com/assets/ubuntu.repo	/home/builder/ubuntu.repo	none	rw,bind		0	0
