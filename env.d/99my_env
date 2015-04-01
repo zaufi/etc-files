@@ -16,8 +16,6 @@ HISTIGNORE="&:[ ]*:exit:ls:ll:pwd:mc:su:df:du:du0:du1:clear:pushd:popd:reset:fg:
 
 # Setup some paludis and system options
 CONFIG_PROTECT=/etc/localtime
-CAVE_SEARCH_INDEX=/var/cache/paludis/csi.idx
-CAVE_RESUME_FILE_OPT='--resume-file /storage/tmp/paludis/resume'
 
 # Set some DE and graphics related options
 GDFONTPATH='/usr/share/fonts/util:/usr/share/fonts/default:/usr/share/fonts/zaufi-fontset:/usr/share/fonts/encodings:/usr/share/fonts/encodings/large:/usr/share/fonts/terminus:/usr/share/fonts/dejavu:/usr/share/fonts/anonymous-pro:/usr/share/fonts/corefonts:/usr/share/fonts/intlfonts:/usr/share/fonts/urw-fonts'
