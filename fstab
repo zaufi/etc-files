@@ -12,23 +12,16 @@
 #
 
 # <fs>					<mountpoint>	<type>		<opts>							<dump/pass>
-/dev/sdb2				/		btrfs		noatime,nodiratime,compress,discard,ssd,subvol=rootfs	0 0
-/dev/sdb2				/boot		btrfs		noatime,nodiratime,ro,compress,discard,ssd,subvol=boot	0 2
-/dev/sdb2				/home		btrfs		noatime,nodiratime,compress,discard,ssd,subvol=home	0 2
+/dev/sda3				/		btrfs		noatime,nodiratime,compress,subvol=rootfs		0 0
+/dev/sda3				/boot		btrfs		noatime,nodiratime,compress,subvol=boot,ro		0 2
 
 # Mount LVM2 volumes
-/dev/mapper/storage-local		/usr/local	reiserfs	noatime,nodiratime,notail				0 2
-/dev/mapper/storage-storage		/storage	reiserfs	noatime,nodiratime,notail				0 2
-#/dev/mapper/storage-home		/home		reiserfs	noatime,nodiratime,notail				0 2
-/dev/mapper/storage-work		/work		reiserfs	noatime,nodiratime,notail				0 2
+/dev/mapper/storage-UserData		/home		reiserfs	noatime,nodiratime,notail				0 2
 
 # Mount special filesystems
-/dev/mapper/storage-swap		none		swap		sw							0 0
-none					/dev/shm	tmpfs		exec,relatime,size=10G					0 0
+/dev/sda2				none		swap		sw							0 0
+none					/dev/shm	tmpfs		exec,relatime,size=3G					0 0
 none					/tmp		tmpfs		rw							0 0
-
-# Remount some dirs
-#/storage/lxc				/var/lxc	none		rw,bind							0 0
 
 # Other (non-auto) mountpoints
 LABEL=UEFI				/boot/efi	vfat		noauto							0 2
