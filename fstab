@@ -19,7 +19,6 @@
 # Mount LVM2 volumes
 /dev/mapper/storage-local		/usr/local	reiserfs	noatime,nodiratime,notail				0 2
 /dev/mapper/storage-storage		/storage	reiserfs	noatime,nodiratime,notail				0 2
-#/dev/mapper/storage-home		/home		reiserfs	noatime,nodiratime,notail				0 2
 /dev/mapper/storage-work		/work		reiserfs	noatime,nodiratime,notail				0 2
 
 # Mount special filesystems
