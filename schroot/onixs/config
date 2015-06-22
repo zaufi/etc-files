@@ -13,7 +13,7 @@ case ${CHROOT_NAME} in
 *.gentoo)
     _fstab_ext=.gentoo
     ;;
-*.saucy|*.vivid)
+*.saucy*|*.vivid*)
     _fstab_ext=.ubuntu
     ;;
 esac
