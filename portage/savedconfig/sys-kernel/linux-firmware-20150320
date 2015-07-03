@@ -3,3 +3,11 @@ iwlwifi-3160-12.ucode
 iwlwifi-3160-7.ucode
 iwlwifi-3160-8.ucode
 iwlwifi-3160-9.ucode
+intel/ibt-hw-37.8.bseq
+intel/ibt-hw-37.8.10-fw-1.10.3.11.e.bseq
+intel/ibt-hw-37.8.10-fw-1.10.2.27.d.bseq
+intel/ibt-hw-37.7.bseq
+intel/ibt-hw-37.7.10-fw-1.80.2.3.d.bseq
+intel/ibt-hw-37.7.10-fw-1.80.1.2d.d.bseq
+intel/ibt-hw-37.7.10-fw-1.0.2.3.d.bseq
+intel/ibt-hw-37.7.10-fw-1.0.1.2d.d.bseq
