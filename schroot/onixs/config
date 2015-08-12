@@ -16,6 +16,9 @@ case ${CHROOT_NAME} in
 *.lucid*|*.maverick*|*.natty*|*.oneiric*|*.precise*|*.quantal*|*.raring*|*.saucy*|*.trusty*|*.utopic*|*.vivid*|.wily*)
     _fstab_ext=.ubuntu
     ;;
+*.opensuse*)
+    _fstab_ext=.suse
+    ;;
 esac
 
 SETUP_FSTAB="onixs/fstab${_fstab_ext}"
