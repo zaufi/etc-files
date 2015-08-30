@@ -28,3 +28,6 @@ PROMPT_DIRTRIM=3
 #CCACHE_DIR=/storage/tmp/ccache
 
 NODE_PATH=/usr/lib64/node_modules
+
+# Since GDB 7.10 (200 commands more than enough)
+GDBHISTSIZE=200
