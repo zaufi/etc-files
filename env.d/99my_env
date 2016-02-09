@@ -12,7 +12,7 @@ LESSCOLOR=yes
 HISTCONTROL=ignoredups:erasedups
 HISTSIZE=100000
 HISTFILESIZE=1000000
-HISTIGNORE="&:[ ]*:exit:ls:ll:pwd:mc:su:df:du:du0:du1:clear:pushd:popd:reset:fg:bg:ipython"
+HISTIGNORE="&:[ ]*:exit:ls:ll:pwd:mc:su:df:du:du0:du1:clear:pushd:popd:reset:fg:bg:ipython:rm -rf *"
 
 # Setup some paludis and system options
 CONFIG_PROTECT=/etc/localtime
