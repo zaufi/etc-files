@@ -10,5 +10,6 @@
 /dev/shm						/dev/shm			none	rw,bind		0	0
 /tmp							/tmp				none	rw,bind		0	0
 /home							/home				none	rw,bind		0	0
+/root							/root				none	rw,bind		0	0
 /work							/work				none	rw,bind		0	0
 /usr/src						/usr/src			none	rw,bind		0	0
