@@ -16,6 +16,8 @@
 /dev/sdb2				/boot		btrfs		noatime,nodiratime,ro,compress,discard,ssd,subvol=boot	0 2
 /dev/sdb2				/home		btrfs		noatime,nodiratime,compress,discard,ssd,subvol=home	0 2
 
+LABEL=SYSTEM-BACKUP			/mnt/backup	reiserfs	noatime,nodiratime,notail				0 2
+
 # Mount LVM2 volumes
 /dev/mapper/storage-local		/usr/local	reiserfs	noatime,nodiratime,notail				0 2
 /dev/mapper/storage-storage		/storage	reiserfs	noatime,nodiratime,notail				0 2
