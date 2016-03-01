@@ -10,5 +10,8 @@ CAVE_RESUME_FILE_OPT='--resume-file /storage/tmp/paludis/cave.resume'
 # Here is options for vairous `cave` subcommands
 CAVE_FIX_LINKAGE_OPTIONS=" -- ${CAVE_RESUME_FILE_OPT}"
 
+# Options for resolve
+CAVE_RESOLVE_OPTIONS='--dump-restarts'
+
 # Options for pkg-meta-diff
 PKG_META_DIFF_OPTIONS='-u'
