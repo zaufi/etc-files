@@ -10,8 +10,9 @@ LESSCOLOR=yes
 
 # Setup history
 HISTCONTROL=ignoredups:erasedups
-HISTSIZE=100000
-HISTFILESIZE=1000000
+HISTSIZE=1000000
+# NOTE Non numeric (or negative) value inhibits trunkation
+HISTFILESIZE=unlimited
 HISTIGNORE="&:[ ]*:exit:ls:ll:pwd:mc:su:df:du:du0:du1:clear:pushd:popd:reset:fg:bg:ipython:rm -rf *"
 
 # Setup some paludis and system options
