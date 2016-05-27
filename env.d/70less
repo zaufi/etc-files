@@ -1,6 +1,2 @@
-# NOTE Due a bug in GCC's libstdc++ and hence in paludis,
-# this file is not recognized as a text, so it is better to add a
-# long comment here to make it looks like a text...
-
 LESSOPEN="|lesspipe %s"
 LESS="-R -M --shift 5"
