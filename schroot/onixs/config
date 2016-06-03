@@ -5,8 +5,6 @@
 
 _fstab_ext=''
 
-echo ONXIS_PURPOSE=${ONIXS_PURPOSE}
-
 env >>/tmp/`basename $0`.log
 
 # Filesystems to mount inside the chroot.
