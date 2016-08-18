@@ -1,25 +1,31 @@
-# Settings for "default" profile.
+# Settings for "onxis" profile.
+#
+# NOTE This profile for manual builds of OnixS products and chroot maintenance.
+#
 # See schroot.conf(5) and schroot-script-config(5) for further details.
 # The files detailed below may also be edited to further customise
 # this profile.
 
-_fstab_ext=''
-
-env >>/tmp/`basename $0`.log
-
-# Filesystems to mount inside the chroot.
-case ${CHROOT_NAME} in
-*.rhel-*|*.centos-*)
-    _fstab_ext=.rh
-    ;;
-*.gentoo*)
-    _fstab_ext=.gentoo
-    ;;
-*.lucid*|*.maverick*|*.natty*|*.oneiric*|*.precise*|*.quantal*|*.raring*|*.saucy*|*.trusty*|*.utopic*|*.vivid*|.wily*)
-    _fstab_ext=.ubuntu
-    ;;
-*.opensuse*)
-    _fstab_ext=.suse
+case "${ONIXS_PURPOSE}" in
+#
+# Regualr build chroot (for manual builds)
+#
+build)
+    # Filesystems to mount inside the regular build chroot.
+    case ${CHROOT_NAME} in
+    *.rhel-*|*.centos-*|*.opensuse-*)
+        _fstab_ext=".${ONIXS_PURPOSE}.rpms"
+        ;;
+    *.gentoo*)
+        _fstab_ext=".${ONIXS_PURPOSE}.gentoo"
+        ;;
+    *.lucid*|*.maverick*|*.natty*|*.oneiric*|*.precise*|*.quantal*|*.raring*|*.saucy*|*.trusty*|*.utopic*|*.vivid*|.wily*)
+        _fstab_ext=".${ONIXS_PURPOSE}.debs"
+        ;;
+    *)
+        fatal "Dunno what fstab to use... ;-("
+        ;;
+    esac
     ;;
 esac
 

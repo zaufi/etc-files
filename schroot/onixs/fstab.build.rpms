@@ -10,8 +10,8 @@
 /dev/shm						/dev/shm			none	rw,bind		0	0
 /tmp							/tmp				none	rw,bind		0	0
 /home							/home				none	rw,bind		0	0
-/root							/root				none	rw,bind		0	0
 /storage/tmp/rpm					/home/builder/rpm		none	rw,bind		0	0
+/root							/root				none	rw,bind		0	0
 /work							/work				none	rw,bind		0	0
 /usr/local/onixs.builder				/usr/local/onixs		none	rw,bind		0	0
 /var/run						/var/run			none	rw,bind		0	0

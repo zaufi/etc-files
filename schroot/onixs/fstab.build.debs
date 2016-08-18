@@ -10,7 +10,6 @@
 /tmp							/tmp				none	rw,bind		0	0
 /home							/home				none	rw,bind		0	0
 /root							/root				none	rw,bind		0	0
-/storage/tmp/deb					/home/builder/deb		none	rw,bind		0	0
 /work							/work				none	rw,bind		0	0
 /storage/soft/ubuntu/archives				/var/cache/apt/archives		none	rw,bind		0	0
 /usr/local/onixs.builder				/usr/local/onixs		none	rw,bind		0	0
