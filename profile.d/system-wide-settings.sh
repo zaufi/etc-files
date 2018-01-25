@@ -9,6 +9,7 @@ alias ll='ls -FlA --color=auto --group-directories-first --indicator-style=file-
 alias ls='ls --color=auto'
 alias screen='screen -U'
 alias top='htop'
+alias info='pinfo'
 
 alias diff='diff -u'
 alias strace='strace -s 80 -a 60'

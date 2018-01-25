@@ -1,2 +1,6 @@
 LESSOPEN="|lesspipe %s"
 LESS="-R -M --shift 5"
+
+# Setup some more `less` options
+LESSCHARSET=utf-8
+LESSCOLOR=yes
