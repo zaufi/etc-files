@@ -1,0 +1,2 @@
+# Since GDB 7.10 (200 commands more than enough)
+GDBHISTSIZE=200

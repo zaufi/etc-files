@@ -1,0 +1,2 @@
+# Set GCC diagnostic colors
+GCC_COLORS='error=1;31:warning=1;38;2;120;70;20:note=01;32:caret=01;31:locus=1;38;2;80;80;80:quote=3;38;2;130;110;75'

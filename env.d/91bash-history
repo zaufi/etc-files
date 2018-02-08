@@ -1,0 +1,8 @@
+# Setup bash history
+HISTCONTROL=ignoredups:erasedups
+HISTIGNORE="&:[ ]*:exit:ls:ll:pwd:mc:su:df:du:du0:du1:clear:reset:fg:bg:ipython:rm -rf *"
+HISTTIMEFORMAT="[%F %T] "
+# NOTE Non numeric (or negative) value inhibits truncation
+# (but seem buggy)
+HISTSIZE=
+HISTFILESIZE=

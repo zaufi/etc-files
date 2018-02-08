@@ -1,0 +1,3 @@
+# https://userbase.kde.org/KDE_System_Administration/Environment_Variables
+KDE_USE_IDN=ru
+KDE_NO_IPV6=1

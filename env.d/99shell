@@ -1,0 +1,12 @@
+#
+# Some settings for convenient shell usage
+#
+
+# Setup grep color and default options
+GREP_COLORS="ms=01;31:mc=01;31:sl=:cx=:fn=01;30:ln=01;30:bn=32:se=37"
+
+# Set human redable size format for various commands
+BLOCK_SIZE=human-readable
+
+# Strip loo long directory names from command prompt
+PROMPT_DIRTRIM=3
