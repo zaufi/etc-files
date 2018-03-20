@@ -1,5 +1,5 @@
 #
-# A wrapper around `mc` to use a skin according to terminal supportable colors
+# A wrapper around `mc` to use a skin according to the terminal supportable colors
 #
 
 function mc()
