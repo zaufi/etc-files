@@ -80,17 +80,25 @@
     autosetupmerge = always
     autosetuprebase = always
 
+[status]
+    showStash = true
+
 [alias]
+    aliases = config --get-regexp alias
     br = branch
     ci = commit
     cl = clone
     co = checkout
     cp = cherry-pick
     di = diff
-    lg = log --graph --pretty=format:'%Cred%h%Creset %Cblue%G?%Creset %C(yellow)%d%Creset %s %C(cyan)[%an %ad]%Creset' --abbrev-commit --date=relative
+    lg = log --graph --pretty=format:'%C("#334455")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %s %C("#b060ff" "" italic)[%an %ad]%Creset' --abbrev-commit --date=relative
+    lgp = log --stat -p
+    lgs = log --stat
     st = status
     sub = submodule
     wt = worktree
+    who = shortlog -snce
+    sl = shortlog
 
 [gpg]
     program = gpg2
