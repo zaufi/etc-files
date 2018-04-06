@@ -58,6 +58,9 @@
     stash = "#30b0c0"
     HEAD = "#e0a000"
 
+[log]
+    graphColors = "#909090", "#00557f", "#550000", "#55557f", "#555500", "#aa5500", "#005500"
+
 [column]
     ui = never
 
@@ -91,7 +94,7 @@
     co = checkout
     cp = cherry-pick
     di = diff
-    lg = log --graph --pretty=format:'%C("#334455")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %s %C("#b060ff" "" italic)[%an %ad]%Creset' --abbrev-commit --date=relative
+    lg = log --graph --pretty=format:'%C("#884444")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %s %C("#9040a0" "" italic)[%an %ad]%Creset' --abbrev-commit --date=relative
     lgp = log --stat -p
     lgs = log --stat
     st = status
