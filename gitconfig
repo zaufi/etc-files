@@ -90,11 +90,15 @@
     aliases = config --get-regexp alias
     br = branch
     ci = commit
+    cv = commit -vv
     cl = clone
     co = checkout
+    ct = checkout -t
     cp = cherry-pick
     di = diff
+    fa = fetch --all --tags
     lg = log --graph --pretty=format:'%C("#884444")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %s %C("#9040a0" "" italic)[%an %ad]%Creset' --abbrev-commit --date=relative
+    sls = log --oneline --graph --decorate --stat
     lgp = log --stat -p
     lgs = log --stat
     st = status
@@ -102,6 +106,7 @@
     wt = worktree
     who = shortlog -snce
     sl = shortlog
+    sw = show --pretty=fuller
 
 [gpg]
     program = gpg2
