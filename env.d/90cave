@@ -8,7 +8,7 @@ CONFIG_PROTECT='/etc/env.d/90cave'
 # Options for profile.d/ based stuff
 # (ATTENTION Not for `cave` itself!)
 CAVE_SEARCH_INDEX_FILE=/var/cache/paludis/csi
-CAVE_RESUME_FILE_OPT='--resume-file /tmp/cave.resume'
+CAVE_RESUME_FILE_OPT='--resume-file /storage/paludis/tmp/cave.resume'
 
 # Here is options for vairous `cave` subcommands
 CAVE_FIX_LINKAGE_OPTIONS=" -- ${CAVE_RESUME_FILE_OPT}"
