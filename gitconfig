@@ -2,6 +2,9 @@
     editor = mcedit
     autocrlf = input
 
+[fetch]
+    prune = true
+
 [format]
     pretty = oneline
 
