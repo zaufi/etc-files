@@ -14,7 +14,7 @@
     grep = auto
     interactive = auto
     pager = true
-    showbranch = auto
+    showBranch = auto
     status = auto
     ui = true
 
@@ -67,6 +67,9 @@
 [column]
     ui = never
 
+[commit]
+    verbose = true
+
 [diff]
     colorMoved = dimmed_zebra
     wsErrorHighlight = all
@@ -93,17 +96,15 @@
     aliases = config --get-regexp alias
     br = branch
     ci = commit
-    cv = commit -vv
     cl = clone
     co = checkout
     ct = checkout -t
     cp = cherry-pick
     di = diff
     fa = fetch --all --tags
-    lg = log --graph --pretty=format:'%C("#884444")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %s %C("#9040a0" "" italic)[%an %ad]%Creset' --abbrev-commit --date=relative
-    sls = log --oneline --graph --decorate --stat
-    lgp = log --stat -p
-    lgs = log --stat
+    lg = log --graph --pretty=format:'%C("#884444")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %s %C("#9040a0" "" italic)[%an %ad]%Creset' --date=relative
+    lgp = log --stat -p --pretty=format:'%C("normal" "#333333")---[ %C("#884444")%h%Creset%C("normal" "#333333") %Cblue%G?%Creset%C("normal" "#333333") %C("#e0a000")%d%Creset%C("normal" "#333333") %C("#9040a0" "" italic)%an <%ae> %ad%Creset%C("normal" "#333333") ]---%n%C("#dddddd" "" "bold")%-s%Creset%n%+b%n%C("#666666")%-N%n' --date=relative --minimal
+    lgs = log --oneline --graph --decorate --stat
     st = status
     sub = submodule
     wt = worktree
