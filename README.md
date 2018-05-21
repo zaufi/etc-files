@@ -1,9 +1,6 @@
 What is this
 ============
 
-Here is a repo with configuration files for my hardware spreaded accross
-branches. Use `git branch -r` to list particular configuration branches.
-
-To add a new branch use the following command from the `master` branch:
-
-    $ make add-branch name=some/branch/name
+Here is a repo w/ content of `/etc` directory.
+The `master` is empty! Concrete files are reside in
+branches dedicated for hardware I have (or had)... %)
