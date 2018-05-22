@@ -2,11 +2,29 @@
     editor = mcedit
     autocrlf = input
 
-[fetch]
-    prune = true
+[alias]
+    aliases = config --get-regexp alias
+    br = branch
+    ci = commit
+    cl = clone
+    co = checkout
+    ct = checkout -t
+    cp = cherry-pick
+    di = diff
+    fa = fetch --all --tags
+    lg = log --pretty=format:'%C("#884444")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %s %C("#9040a0" "" italic)[%an %ad]%Creset' --date=relative --graph
+    lgp = log --pretty=format:'%C("normal" "#333333")---[ %C("#884444")%h%Creset%C("normal" "#333333") %Cblue%G?%Creset%C("normal" "#333333") %C("#e0a000")%d%Creset%C("normal" "#333333") %C("#9040a0" "" italic)%an <%ae> %ad%Creset%C("normal" "#333333") ]---%n%C("#dddddd" "" "bold")%-s%Creset%n%+b%n%C("#666666")%-N%n' --stat -p --date=relative --minimal
+    lgs = log --pretty=format:'%C("#884444")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %C("#dddddd" "" "bold")%-s%Creset %C("#9040a0" "" italic)[%an %ad]%Creset' --graph --stat
+    st = status
+    sub = submodule
+    wt = worktree
+    who = shortlog -snce
+    sl = shortlog
+    sw = show --pretty=fuller
 
-[format]
-    pretty = oneline
+[branch]
+    autosetupmerge = always
+    autosetuprebase = always
 
 [color]
     branch = auto
@@ -61,18 +79,30 @@
     stash = "#30b0c0"
     HEAD = "#e0a000"
 
-[log]
-    graphColors = "#909090", "#00557f", "#550000", "#55557f", "#555500", "#aa5500", "#005500"
-
 [column]
     ui = never
 
 [commit]
-    verbose = true
+    verbose = 1
 
 [diff]
     colorMoved = dimmed_zebra
     wsErrorHighlight = all
+
+[fetch]
+    prune = true
+
+[format]
+    pretty = oneline
+    signOff = true
+
+[gpg]
+    program = gpg2
+
+[log]
+    graphColors = "#909090", "#00557f", "#550000", "#55557f", "#555500", "#aa5500", "#005500"
+    abbrevCommit = true
+    decorate = true
 
 [pager]
     branch = false
@@ -85,32 +115,5 @@
 [push]
     default = simple
 
-[branch]
-    autosetupmerge = always
-    autosetuprebase = always
-
 [status]
     showStash = true
-
-[alias]
-    aliases = config --get-regexp alias
-    br = branch
-    ci = commit
-    cl = clone
-    co = checkout
-    ct = checkout -t
-    cp = cherry-pick
-    di = diff
-    fa = fetch --all --tags
-    lg = log --pretty=format:'%C("#884444")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %s %C("#9040a0" "" italic)[%an %ad]%Creset' --date=relative --graph 
-    lgp = log --pretty=format:'%C("normal" "#333333")---[ %C("#884444")%h%Creset%C("normal" "#333333") %Cblue%G?%Creset%C("normal" "#333333") %C("#e0a000")%d%Creset%C("normal" "#333333") %C("#9040a0" "" italic)%an <%ae> %ad%Creset%C("normal" "#333333") ]---%n%C("#dddddd" "" "bold")%-s%Creset%n%+b%n%C("#666666")%-N%n' --stat -p --date=relative --minimal
-    lgs = log --oneline --graph --decorate --stat
-    st = status
-    sub = submodule
-    wt = worktree
-    who = shortlog -snce
-    sl = shortlog
-    sw = show --pretty=fuller
-
-[gpg]
-    program = gpg2
