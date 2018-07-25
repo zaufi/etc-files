@@ -7,20 +7,24 @@
     br = branch
     ci = commit
     cl = clone
+    clm = "!f(){ r=$1; d=$(basename ${r//:/\\/} .git); git clone $r $d/master; };f"
     co = checkout
-    ct = checkout -t
     cp = cherry-pick
+    cs = commit -s
+    ct = checkout -t
     di = diff
-    fa = fetch --all --tags
+    fa = fetch --all --tags --prune --prune-tags
     lg = log --pretty=format:'%C("#884444")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %s %C("#9040a0" "" italic)[%an %ad]%Creset' --date=relative --graph
     lgp = log --pretty=format:'%C("normal" "#333333")---[ %C("#884444")%h%Creset%C("normal" "#333333") %Cblue%G?%Creset%C("normal" "#333333") %C("#e0a000")%d%Creset%C("normal" "#333333") %C("#9040a0" "" italic)%an <%ae> %ad%Creset%C("normal" "#333333") ]---%n%C("#dddddd" "" "bold")%-s%Creset%n%+b%n%C("#666666")%-N%n' --stat -p --date=relative --minimal
     lgs = log --pretty=format:'%C("#884444")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %C("#dddddd" "" "bold")%-s%Creset %C("#9040a0" "" italic)[%an %ad]%Creset' --graph --stat
+    sl = shortlog
     st = status
     sub = submodule
-    wt = worktree
-    who = shortlog -snce
-    sl = shortlog
     sw = show --pretty=fuller
+    who = shortlog -snce
+    wt = worktree
+    wta = "!f(){ if [[ -d .git ]]; then d='../'; elif [[ -f .git ]]; then d=$(< .git); d=$(dirname $(sed -e 's,gitdir: ,,' -e 's,/.git.*,,' <<<$d))/; fi; [[ -n $d ]] && git worktree add $d$1 $1; };f"
+    wtb = "!f(){ if [[ -d .git ]]; then d='../'; elif [[ -f .git ]]; then d=$(< .git); d=$(dirname $(sed -e 's,gitdir: ,,' -e 's,/.git.*,,' <<<$d))/; fi; [[ -n $d ]] && git worktree add -b $1 $d$1; };f"
 
 [branch]
     autosetupmerge = always
