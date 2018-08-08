@@ -5,12 +5,14 @@
 [alias]
     aliases = config --get-regexp alias
     br = branch
+    bro = "checkout --orphan"
+    broc = "!f(){ git checkout --orphan \"$@\" && git rm -rf .; };f"
     ci = commit
     cl = clone
     clm = "!f(){ r=$1; d=$(basename ${r//:/\\/} .git); git clone $r $d/master; };f"
     co = checkout
     cp = cherry-pick
-    cs = commit -s
+    cs = commit -S
     ct = checkout -t
     di = diff
     fa = fetch --all --tags --prune --prune-tags
