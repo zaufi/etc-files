@@ -4,5 +4,5 @@
 
 function mkpasswd()
 {
-    < /dev/urandom tr -dc '_A-Z-a-z-0-9`~!@#$%^&*-=+|\?,./\\<>' | head -c${1:-$1} ;echo;
+    < /dev/urandom tr -dc '_A-Z-a-z-0-9`~!@#$%^&*-=+|\?,./\\<>' | head -c${1:-10} ;echo;
 }
