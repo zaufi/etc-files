@@ -8,22 +8,24 @@
     bro = "checkout --orphan"
     broc = "!f(){ git checkout --orphan \"$@\" && git rm -rf .; };f"
     ci = commit
-    cl = clone
-    clm = "!f(){ r=$1; d=$(basename ${r//:/\\/} .git); git clone $r $d/master; };f"
+    cl = clone --recursive
+    clm = "!f(){ r=$1; d=$(basename ${r//:/\\/} .git); git clone --recursive $r $d/master; };f"
     co = checkout
     cp = cherry-pick
     cs = commit -S
     ct = checkout -t
     di = diff
     fa = fetch --all --tags --prune --prune-tags
+    gi = "!f(){ curl -L -s \"https://www.gitignore.io/api/$@\"; };f"
     lg = log --pretty=format:'%C("#884444")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %s %C("#9040a0" "" italic)[%an %ad]%Creset' --date=relative --graph
     lgp = log --pretty=format:'%C("normal" "#333333")---[ %C("#884444")%h%Creset%C("normal" "#333333") %Cblue%G?%Creset%C("normal" "#333333") %C("#e0a000")%d%Creset%C("normal" "#333333") %C("#9040a0" "" italic)%an <%ae> %ad%Creset%C("normal" "#333333") ]---%n%C("#dddddd" "" "bold")%-s%Creset%n%+b%n%C("#666666")%-N%n' --stat -p --date=relative --minimal
     lgs = log --pretty=format:'%C("#884444")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %C("#dddddd" "" "bold")%-s%Creset %C("#9040a0" "" italic)[%an %ad]%Creset' --graph --stat
+    prune-branches = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
     sl = shortlog
     st = status
     sub = submodule
     sw = show --pretty=fuller
-    who = shortlog -snce
+    who = shortlog -sne
     wt = worktree
     wta = "!f(){ if [[ -d .git ]]; then d='../'; elif [[ -f .git ]]; then d=$(< .git); d=$(dirname $(sed -e 's,gitdir: ,,' -e 's,/.git.*,,' <<<$d))/; fi; [[ -n $d ]] && git worktree add $d$1 $1; };f"
     wtb = "!f(){ if [[ -d .git ]]; then d='../'; elif [[ -f .git ]]; then d=$(< .git); d=$(dirname $(sed -e 's,gitdir: ,,' -e 's,/.git.*,,' <<<$d))/; fi; [[ -n $d ]] && git worktree add -b $1 $d$1; };f"
@@ -93,10 +95,14 @@
 
 [diff]
     colorMoved = dimmed_zebra
+    guitool = kompare
+    renames = copy
+    submodule = log
     wsErrorHighlight = all
 
 [fetch]
     prune = true
+    pruneTags = true
 
 [format]
     pretty = oneline
@@ -105,9 +111,13 @@
 [gpg]
     program = gpg2
 
+[grep]
+    column = true
+    extendedRegexp = true
+
 [log]
-    graphColors = "#909090", "#00557f", "#550000", "#55557f", "#555500", "#aa5500", "#005500"
     abbrevCommit = true
+    graphColors = "#909090", "#00557f", "#550000", "#55557f", "#555500", "#aa5500", "#005500"
     decorate = true
 
 [pager]
@@ -121,5 +131,12 @@
 [push]
     default = simple
 
+[rerere]
+    enabled = true
+
+[stash]
+    showPatch = true
+
 [status]
     showStash = true
+    submoduleSummary = true
