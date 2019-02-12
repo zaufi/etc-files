@@ -18,6 +18,7 @@
     fa = fetch --all --tags --prune --prune-tags
     gi = "!f(){ curl -L -s \"https://www.gitignore.io/api/$@\"; };f"
     lg = log --pretty=format:'%C("#884444")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %s %C("#9040a0" "" italic)[%an %ad]%Creset' --date=relative --graph
+    lgl = log --pretty=format:'%C("#884444")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %C("#9040a0" "" italic)%an <%ae> %ad%Creset%C("normal" "#333333")%n%C("#dddddd" "" "bold")%-s%n%b' --date=relative --minimal
     lgp = log --pretty=format:'%C("normal" "#333333")---[ %C("#884444")%h%Creset%C("normal" "#333333") %Cblue%G?%Creset%C("normal" "#333333") %C("#e0a000")%d%Creset%C("normal" "#333333") %C("#9040a0" "" italic)%an <%ae> %ad%Creset%C("normal" "#333333") ]---%n%C("#dddddd" "" "bold")%-s%Creset%n%+b%n%C("#666666")%-N%n' --stat -p --date=relative --minimal
     lgs = log --pretty=format:'%C("#884444")%h%Creset %Cblue%G?%Creset %C("#e0a000")%d%Creset %C("#dddddd" "" "bold")%-s%Creset %C("#9040a0" "" italic)[%an %ad]%Creset' --graph --stat
     prune-branches = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
