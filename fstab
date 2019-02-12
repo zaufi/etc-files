@@ -11,19 +11,21 @@
 # See the manpage fstab(5) for more information.
 #
 
-# <fs>			<mountpoint>	<type>		<opts>						<dump/pass>
+# <fs>			<mountpoint>		<type>		<opts>								<dump/pass>
 
-LABEL=SYSTEM		/		btrfs		defaults,compress,discard,ssd,subvol=@rootfs		0 0
-LABEL=SYSTEM		/home		btrfs		async,discard,noatime,ssd,subvol=@home			0 2
-LABEL=SYSTEM		/storage	btrfs		async,discard,noatime,ssd,subvol=@storage		0 2
-LABEL=SYSTEM		/work		btrfs		async,discard,noatime,ssd,subvol=@work			0 2
+LABEL=SYSTEM		/			btrfs		discard,noatime,ssd,subvol=@rootfs,compress			0 0
+LABEL=SYSTEM		/home			btrfs		discard,noatime,ssd,subvol=@home				0 2
+LABEL=SYSTEM		/storage		btrfs		discard,noatime,ssd,subvol=@storage				0 2
+LABEL=SYSTEM		/work			btrfs		discard,noatime,ssd,subvol=@work				0 2
+LABEL=WORK		/home/zaufi/work	btrfs		discard,noatime,ssd,subvol=@work,user,x-systemd.automount	0 2
 
-LABEL=SYSTEM		/mnt/disk	btrfs		noauto,ssd,compress,discard,x-systemd.automount		0 2
-LABEL=EFI		/boot/efi	vfat		noauto,noexec,x-systemd.autmount			0 2
+LABEL=SYSTEM		/mnt/disk		btrfs		noauto,ssd,compress,discard,x-systemd.automount			0 2
+LABEL=EFI		/boot/efi		vfat		noauto,noexec,x-systemd.autmount				0 2
 
-LABEL=SWAP		none		swap		sw							0 0
-none			/dev/shm	tmpfs		exec,relatime,size=10G					0 0
-none			/tmp		tmpfs		rw							0 0
+LABEL=SWAP		none			swap		sw,discard							0 0
+LABEL=HIBROOM		none			swap		sw,discard							0 0
+none			/dev/shm		tmpfs		defaults,size=20G						0 0
+none			/tmp			tmpfs		defaults,size=100M						0 0
 
 # Mount EFI variable RO!
-none			/sys/firmware/efi/efivars	efivarfs		ro				0 0
+none			/sys/firmware/efi/efivars	efivarfs		ro						0 0
